@@ -15,6 +15,11 @@ data:
     global:
       scrape_interval: 30s
       scrape_timeout: 20s
+    remote_write:
+    - url: <YOUR_REMOTE_WRITE_URL>
+      basic_auth:
+        username: <YOUR_USERNAME>
+        password: <YOUR_GRAFANA_CLOUD_API_TOKEN>
     scrape_configs:
       #------------- configuration to collect pods metrics -------------------
       - job_name: 'kubernetes-pods'
